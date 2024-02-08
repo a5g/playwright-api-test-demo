@@ -37,6 +37,9 @@ $ npm run test:user
 
 To run all P0 api tests
 $ npm run test:p0
+
+To run a sample ui test
+$ npm run test:ui
 ```
 
 ## Test Reports
