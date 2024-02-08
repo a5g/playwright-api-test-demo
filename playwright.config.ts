@@ -3,12 +3,6 @@ import { devices } from '@playwright/test'
 import config from './config'
 
 /**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
-
-/**
  * See https://playwright.dev/docs/test-configuration.
  */
 const pwconfig: PlaywrightTestConfig = {
@@ -47,9 +41,6 @@ const pwconfig: PlaywrightTestConfig = {
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
-  // globalSetup: require.resolve('./global-setup'),
-  // globalTeardown: require.resolve('./global-teardown'),
-
   use: {
     baseURL: 'https://www.saucedemo.com/',
     extraHTTPHeaders: config.extraHTTPHeaders,
@@ -58,11 +49,6 @@ const pwconfig: PlaywrightTestConfig = {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0, // 60 seconds
     navigationTimeout: 2 * 60 * 1000, // 120 seconds
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
-
-    // storageState: `state.${cnfg.kite.username}.json`,
-    // storageState: config.stateJsonFile,
     viewport: {
       width: config.BROWSER_WIDTH,
       height: config.BROWSER_HEIGHT,
@@ -73,22 +59,16 @@ const pwconfig: PlaywrightTestConfig = {
   },
 
   /* Configure projects for major browsers */
-
   projects: [
-    // { name: 'setup', testMatch: /.*\.setup\.ts/ },
     {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        // Use prepared auth state.
-        // storageState: 'playwright/.auth/adcreator.json',
-
         viewport: {
           width: config.BROWSER_WIDTH,
           height: config.BROWSER_HEIGHT,
         },
       },
-      // dependencies: ['setup'],
     },
 
     // {
@@ -143,15 +123,6 @@ const pwconfig: PlaywrightTestConfig = {
     //   },
     // },
   ],
-
-  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  // outputDir: 'test-results/',
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
 }
 
 export default pwconfig
