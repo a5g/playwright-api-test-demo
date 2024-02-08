@@ -1,0 +1,13 @@
+.DS_STORE
+*.state.json
+test-results.xml
+test-results.json
+results.xml
+node_modules/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+allure/
+playwright/
+tmp/

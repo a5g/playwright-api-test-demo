@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "strict": true,
+    "strictNullChecks": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false
+  }
+}
