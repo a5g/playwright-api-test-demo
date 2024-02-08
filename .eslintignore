@@ -1,0 +1,12 @@
+node_modules
+dist
+tmp
+lib
+allure-results/
+allure-report/
+playwright-report/
+test-results/
+test-results.json
+test-results.xml
+*.state.json
+package-lock.json
