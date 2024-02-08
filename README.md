@@ -20,7 +20,7 @@ $ git clone git@github.com:a5g/playwright-api-test-demo.git
 
 ## Run Tests
 
-Watch [video]()
+Watch [video](https://youtu.be/LHHnGpqRMG0)
 
 ```
 To run all api tests [Pet, Store and User]
